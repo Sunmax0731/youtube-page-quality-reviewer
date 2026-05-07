@@ -1,0 +1,57 @@
+{
+  "repository": "youtube-page-quality-reviewer",
+  "version": "v0.1.0-alpha.1",
+  "command": "npm test",
+  "scenarios": [
+    {
+      "id": "happy-path",
+      "expected": {
+        "overall": "pass",
+        "counts": {
+          "pass": 1,
+          "warning": 0,
+          "fail": 0
+        }
+      }
+    },
+    {
+      "id": "missing-required",
+      "expected": {
+        "overall": "fail",
+        "counts": {
+          "pass": 0,
+          "warning": 0,
+          "fail": 1
+        }
+      }
+    },
+    {
+      "id": "warning",
+      "expected": {
+        "overall": "warning",
+        "counts": {
+          "pass": 0,
+          "warning": 1,
+          "fail": 0
+        }
+      }
+    },
+    {
+      "id": "mixed-batch",
+      "expected": {
+        "overall": "fail",
+        "counts": {
+          "pass": 1,
+          "warning": 1,
+          "fail": 1
+        }
+      }
+    }
+  ],
+  "stableEvidenceOnly": true,
+  "excludes": [
+    "zip byte size",
+    "generated timestamp",
+    "absolute temp paths"
+  ]
+}

@@ -1,0 +1,132 @@
+[
+  {
+    "id": "happy-path",
+    "description": "必須項目がそろい、警告もない代表成功ケース。",
+    "input": {
+      "items": [
+        {
+          "id": "happy-path",
+          "url": "https://example.com/watch?v=alpha",
+          "pageTitle": "公開ページ・YouTube・表示品質レビュー サンプルページ",
+          "publishTarget": "Chrome Web Store",
+          "qualitySignals": [
+            "viewport",
+            "thumbnail",
+            "description"
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "overall": "pass",
+      "counts": {
+        "pass": 1,
+        "warning": 0,
+        "fail": 0
+      }
+    }
+  },
+  {
+    "id": "missing-required",
+    "description": "必須項目が欠落し、失敗として扱うケース。",
+    "input": {
+      "items": [
+        {
+          "id": "missing-required",
+          "pageTitle": "公開ページ・YouTube・表示品質レビュー サンプルページ",
+          "publishTarget": "Chrome Web Store",
+          "qualitySignals": [
+            "viewport",
+            "thumbnail",
+            "description"
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "overall": "fail",
+      "counts": {
+        "pass": 0,
+        "warning": 0,
+        "fail": 1
+      }
+    }
+  },
+  {
+    "id": "warning",
+    "description": "自動判定では進められるが、手動確認を要求するケース。",
+    "input": {
+      "items": [
+        {
+          "id": "warning",
+          "url": "https://example.com/watch?v=alpha",
+          "pageTitle": "公開ページ・YouTube・表示品質レビュー サンプルページ",
+          "publishTarget": "Chrome Web Store",
+          "qualitySignals": [
+            "viewport",
+            "thumbnail",
+            "description"
+          ],
+          "needsHumanReview": true
+        }
+      ]
+    },
+    "expected": {
+      "overall": "warning",
+      "counts": {
+        "pass": 0,
+        "warning": 1,
+        "fail": 0
+      }
+    }
+  },
+  {
+    "id": "mixed-batch",
+    "description": "成功、警告、失敗が混在するバッチ検証ケース。",
+    "input": {
+      "items": [
+        {
+          "id": "mixed-pass",
+          "url": "https://example.com/watch?v=alpha",
+          "pageTitle": "公開ページ・YouTube・表示品質レビュー サンプルページ",
+          "publishTarget": "Chrome Web Store",
+          "qualitySignals": [
+            "viewport",
+            "thumbnail",
+            "description"
+          ]
+        },
+        {
+          "id": "mixed-warning",
+          "url": "https://example.com/watch?v=alpha",
+          "pageTitle": "公開ページ・YouTube・表示品質レビュー サンプルページ",
+          "publishTarget": "Chrome Web Store",
+          "qualitySignals": [
+            "viewport",
+            "thumbnail",
+            "description"
+          ],
+          "needsHumanReview": true
+        },
+        {
+          "id": "mixed-fail",
+          "url": "https://example.com/watch?v=alpha",
+          "publishTarget": "Chrome Web Store",
+          "qualitySignals": [
+            "viewport",
+            "thumbnail",
+            "description"
+          ]
+        }
+      ]
+    },
+    "expected": {
+      "overall": "fail",
+      "counts": {
+        "pass": 1,
+        "warning": 1,
+        "fail": 1
+      }
+    }
+  }
+]

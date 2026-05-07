@@ -1,0 +1,76 @@
+{
+  "repository": "youtube-page-quality-reviewer",
+  "version": "v0.1.0-alpha.1",
+  "qcds": {
+    "scale": [
+      "S+",
+      "S-",
+      "A+",
+      "A-",
+      "B+",
+      "B-",
+      "C+",
+      "C-",
+      "D+",
+      "D-"
+    ],
+    "grades": {
+      "Quality": "S-",
+      "Cost": "S-",
+      "Delivery": "S-",
+      "Satisfaction": "S-"
+    },
+    "minimumRequired": "A-"
+  },
+  "evidence": {
+    "representativeScenarios": [
+      "happy-path",
+      "missing-required",
+      "warning",
+      "mixed-batch"
+    ],
+    "requiredDocsPresent": [
+      "requirements.md",
+      "specification.md",
+      "design.md",
+      "implementation-plan.md",
+      "test-plan.md",
+      "manual-test.md",
+      "installation-guide.md",
+      "user-guide.md",
+      "release-checklist.md",
+      "responsibility-map.md",
+      "ui-ux-polish.md",
+      "post-mvp-roadmap.md",
+      "competitive-benchmark.md",
+      "evaluation-criteria.md",
+      "qcds-evaluation.md",
+      "qcds-remote-benchmark.md",
+      "qcds-strict-gap-analysis.md",
+      "qcds-strict-metrics.json",
+      "qcds-regression-baseline.json",
+      "security-privacy-checklist.md",
+      "traceability-matrix.md",
+      "strict-manual-test-addendum.md",
+      "releases/v0.1.0-alpha.1.md",
+      "source-idea-pack.json"
+    ],
+    "automatedTestCommand": "npm test",
+    "docsZipPath": "dist/youtube-page-quality-reviewer-docs.zip",
+    "docsZipSizeUsedAsEvidence": false,
+    "mojibakeCheck": "enabled",
+    "traceabilityMatrix": "docs/traceability-matrix.md",
+    "securityPrivacyChecklist": "docs/security-privacy-checklist.md"
+  },
+  "release": {
+    "tag": "v0.1.0-alpha.1",
+    "prerelease": true,
+    "latest": false,
+    "manualTestByCodex": "not-run",
+    "requiredAssets": [
+      "dist/youtube-page-quality-reviewer-docs.zip",
+      "docs/manual-test.md",
+      "docs/strict-manual-test-addendum.md"
+    ]
+  }
+}
