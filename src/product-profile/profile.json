@@ -1,0 +1,19 @@
+{
+  "name": "youtube-page-quality-reviewer",
+  "title": "公開ページ・YouTube・表示品質レビュー",
+  "domain": "ChromeExtension",
+  "kind": "chrome-extension",
+  "host": null,
+  "field": "公開ページQA",
+  "audience": "YouTube投稿者、LP運用者、公開前レビュー担当者",
+  "workflow": "URL、ページ種別、表示品質シグナル、修正メモを集め、公開前に見落としを分類する。",
+  "requiredFields": [
+    "url",
+    "pageTitle",
+    "publishTarget",
+    "qualitySignals"
+  ],
+  "warningField": "needsHumanReview",
+  "warningMessage": "サムネイル、説明文、埋め込み表示など手動確認が必要です。",
+  "qcdsTarget": "A-以上。closed alphaではS-を基準とする。"
+}
