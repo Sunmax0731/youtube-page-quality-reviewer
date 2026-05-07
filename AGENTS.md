@@ -18,4 +18,4 @@
 - mojibake 判定は `npm test` 内の `scripts/check-mojibake.js` で行う。
 - 手動テストは Codex では実施しない。未実施項目を docs に残して release notes にも転記する。
 - 作業ブランチは `codex/closed-alpha-release` の1本だけを使い、完了後にローカル/リモートから削除する。
-
+- Git on Windows may warn that generated JSON LF will be replaced by CRLF. Treat this as line-ending normalization only; rerun `npm test` to regenerate docs ZIP and do not use newline-only churn as QCDS evidence.

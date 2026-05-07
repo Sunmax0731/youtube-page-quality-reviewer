@@ -16,4 +16,4 @@
 - QCDS は Quality、Cost、Delivery、Satisfaction を `S+ / S- / A+ / A- / B+ / B- / C+ / C- / D+ / D-` で評価する。
 - A- 未満の観点がある場合は `docs/qcds-strict-gap-analysis.md` に理由と改善を記録し、A- 以上へ戻してから release する。
 - docs ZIP は `dist/youtube-page-quality-reviewer-docs.zip` に再生成する。
-
+- If Git reports LF/CRLF normalization on generated JSON, keep the content UTF-8, rerun `npm test`, and verify `git status -sb` instead of editing files solely for newline churn.
