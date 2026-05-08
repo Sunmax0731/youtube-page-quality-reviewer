@@ -1,0 +1,32 @@
+{
+  "product": "youtube-page-quality-reviewer",
+  "repository": "Sunmax0731/youtube-page-quality-reviewer",
+  "githubUrl": "https://github.com/Sunmax0731/youtube-page-quality-reviewer",
+  "tag": "v0.1.0-alpha.1",
+  "releaseUrl": "https://github.com/Sunmax0731/youtube-page-quality-reviewer/releases/tag/v0.1.0-alpha.1",
+  "prerelease": true,
+  "latest": false,
+  "assetCount": 3,
+  "assets": [
+    "youtube-page-quality-reviewer-docs.zip",
+    "manual-test.md",
+    "strict-manual-test-addendum.md"
+  ],
+  "platformRuntimeGate": "dist/platform-runtime-gate-result.json",
+  "platformType": "chrome-extension",
+  "manualTest": "not-run-by-codex",
+  "qcdsEvaluation": {
+    "Quality": "S-",
+    "Cost": "S-",
+    "Delivery": "S-",
+    "Satisfaction": "S-",
+    "capReason": "manual-test-not-run-by-codex"
+  },
+  "github": {
+    "repo": "Sunmax0731/youtube-page-quality-reviewer",
+    "url": "https://github.com/Sunmax0731/youtube-page-quality-reviewer",
+    "releaseUrl": "https://github.com/Sunmax0731/youtube-page-quality-reviewer/releases/tag/v0.1.0-alpha.1",
+    "prerelease": true,
+    "latest": false
+  }
+}
