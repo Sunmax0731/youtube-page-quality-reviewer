@@ -1,0 +1,11 @@
+{
+  "product": "youtube-page-quality-reviewer",
+  "title": "公開ページ・YouTube・表示品質レビュー",
+  "domain": "ChromeExtension",
+  "ideaNo": 6,
+  "platformType": "chrome-extension",
+  "expectedPublicTarget": "Chrome Web Store",
+  "browser": null,
+  "android": null,
+  "evidence": "dist/platform-runtime-gate-result.json"
+}

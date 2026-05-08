@@ -5,9 +5,11 @@
   "description": "公開ページ・YouTube・表示品質レビュー closed alpha package",
   "type": "commonjs",
   "scripts": {
-    "test": "node scripts/check-mojibake.js && node test/representative-suite.test.js && node scripts/build-docs-zip.js && node scripts/qcds-check.js",
+    "test": "node scripts/check-mojibake.js && node test/representative-suite.test.js && node scripts/build-docs-zip.js && node scripts/qcds-check.js && node tools/platform-runtime-gate.mjs && node tools/closed-alpha-guard.mjs",
     "build:docs": "node scripts/build-docs-zip.js",
-    "alpha:run": "node src/cli/index.js samples/representative-suite.json"
+    "alpha:run": "node src/cli/index.js samples/representative-suite.json",
+    "platform:gate": "node tools/platform-runtime-gate.mjs",
+    "closed-alpha:guard": "node tools/closed-alpha-guard.mjs"
   },
   "files": [
     "src",

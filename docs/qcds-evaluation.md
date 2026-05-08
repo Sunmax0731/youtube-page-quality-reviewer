@@ -8,4 +8,3 @@
 | Satisfaction | 利用者が次アクションへ進める明瞭さ | S- | user guide、manual-test、warning理由 |
 
 A- 未満の観点はありません。手動テストは Codex 側では未実施のため、S+ ではなく S- とします。
-
